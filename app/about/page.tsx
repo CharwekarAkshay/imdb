@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div className="max-w-6xl mx-auto  space-y-4">
+        <div className="max-w-6xl mx-auto  space-y-4 p-4">
             <h1 className="text-2xl font-medium text-amber-600">About</h1>
             <p>Welcome to our IMDb Clone website, the ultimate destination for movie lovers, entertainment enthusiasts,
                 and industry professionals alike! Our platform offers an extensive and regularly-updated database of
