@@ -15,7 +15,7 @@ const Card = (props: CardProps) => {
             className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200 group">
             <Link href={`/movie/${movie.id}`}>
                 <Image src={`https://image.tmdb.org/t/p/original${movie.backdrop_path || movie.poster_path}`}
-                       alt={movie.title} width={500}
+                       alt={movie.title || movie.original_title || "Movie Title"} width={500}
                        height={300}
                        className="sm:rounded-t-lg sm:rounded-b-none sm:h-64 sm:w-full sm:object-cover sm:object-center group-hover:opacity-80 transition-opacity duration-200"
                        placeholder="blur"
@@ -30,13 +30,13 @@ const Card = (props: CardProps) => {
                 <div className="p-2">
                     <p className="line-clamp-2 text-md">{movie.overview}</p>
                     <h2 className="truncate text-lg font-bold">{movie.original_title || movie.title}</h2>
-                    <p className="flex justify-between ">
+                    <div className="flex justify-between ">
                         {movie.release_date || movie.first_air_date}
-                        <p className="flex items-center gap-2.5">
+                        <div className="flex items-center gap-2.5">
                             <HiOutlineThumbUp/>
                             {movie.vote_count}
-                        </p>
-                    </p>
+                        </div>
+                    </div>
                 </div>
             </Link>
         </div>

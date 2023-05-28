@@ -23,7 +23,7 @@ const MoviePage = async (props: MoviePageProps) => {
             <div
                 className="p-4 md:pt-8 flex flex-col md:flex-row items-center content-center max-w-6xl mx-auto md:space-x-6">
                 <Image src={`https://image.tmdb.org/t/p/original${movie.backdrop_path || movie.poster_path}`}
-                       alt={movie.title} width={500}
+                       alt={movie.title || movie.original_title || "Movie Title"} width={500}
                        height={300}
                        className="rounded-lg "
                        placeholder="blur"
