@@ -12,12 +12,12 @@ const NavbarItem = (props: NavbarItemProps) => {
     const {title, params} = props;
     const searchParams = useSearchParams();
 
-    const genere = searchParams.get("genre");
+    const genre = searchParams.get("genre");
 
     const getActiveClass = (): string => {
-        if (genere && genere === params) {
+        if (genre && genre === params) {
             return "underline underline-offset-8 decoration-4 decoration-amber-500 rounded-lg text-amber-600";
-        }
+        }``
         return "";
     };
 
